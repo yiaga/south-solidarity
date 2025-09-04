@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import pattern from "@/public/assets/images/PATTERN.png";
+import pattern from "@/public/assets/images/pattern.png";
 import Logo from "../Generics/Logo";
 
 const HommerBanner = () => {
