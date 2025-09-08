@@ -4,11 +4,13 @@ import BaseSpacing from "../Spacing/BaseSpacing";
 
 interface Props {
   variant?: HeadingVariantType;
+  color?: string;
 }
 
 const HeadingBorderBottom = ({
   children,
   variant = "h1",
+  color = '#FFAC13',
 }: Readonly<PropsWithChildren<Props>>) => {
   return (
     <div className="w-max">
@@ -16,7 +18,10 @@ const HeadingBorderBottom = ({
         {children}
       </Heading>
       <BaseSpacing />
-      <hr className="bg-primary border-0 mt-2 mb-6 w-[125px] h-[6px] block" />
+      <hr
+        className="border-0 mt-2 mb-6 w-[125px] h-[6px] block"
+        style={{ backgroundColor: color }}
+      />
     </div>
   );
 };
