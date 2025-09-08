@@ -3,7 +3,6 @@ import Buttton from "./components/Buttons/Buttton";
 import Wrapper from "./components/Generics/Wrapper";
 import HeadingBorderBottom from "./components/Headers/HeadingBorderBottom";
 import KeyObjectives from "./components/Objectives/KeyObjectives";
-import OurProgrammes from "./components/Programmes/OurProgrammes";
 import Program from "./components/Programmes/Program";
 import BaseSpacing from "./components/Spacing/BaseSpacing";
 import ContentSpacing from "./components/Spacing/ContentSpacing";
