@@ -67,7 +67,6 @@ export default function Home() {
         bgText="text-white"
       />
       <Program />
-      <SectionSpacing />
       <KeyObjectives />
     </section>
   );
