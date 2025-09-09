@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Logo from "./components/Generics/Logo";
 import Socials from "./components/Generics/Socials";
 import Wrapper from "./components/Generics/Wrapper";
@@ -10,7 +11,7 @@ const Footer = () => {
           className="h-[221px] flex items-center justify-between bg-text 'border-b border-amber-300'"
         >
           <div>
-            <Logo />
+            <Link  href="/"><Logo /></Link>
           </div>
 
           <ul className="font-inter flex flex-col space-y-2">
@@ -18,12 +19,12 @@ const Footer = () => {
               <h4 className="font-bold text-lg text-[#FFAC13]">QUICK LINKS</h4>
             </li>
             <li className="flex space-x-4 text-white">
-              <a href="#">HOME</a>
-              <a href="#">PROGRAMS</a>
-              <a href="#">SPEAKERS</a>
-              <a href="#">RESOURCES</a>
-              <a href="#">UPDATES</a>
-              <a href="#">WATCH SESSIONS</a>
+              <Link href="/" className="menu-link">HOME</Link>
+              <Link href="/programs" className="menu-link">PROGRAMS</Link>
+              <Link href="/speakers" className="menu-link">SPEAKERS</Link>
+              <Link href="/resources" className="menu-link">RESOURCES</Link>
+              <Link href="/updates" className="menu-link">UPDATES</Link>
+              <Link href="/watchsessions" className="menu-link">WATCH SESSIONS</Link>
             </li>
           </ul>
 

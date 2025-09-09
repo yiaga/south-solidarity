@@ -64,6 +64,7 @@ export default function Home() {
         title="Meet Our Speakers"
         className="bg-black py-24"
         bgText="text-white"
+        numberOfMembers={6}
       />
       <Program />
       <KeyObjectives />

@@ -1,4 +1,3 @@
-
 import React, { PropsWithChildren } from "react";
 import TeamCard from "./TeamCard";
 import Wrapper from "../Generics/Wrapper";
@@ -9,13 +8,17 @@ interface Props {
   title: string;
   className: string;
   bgText: "text-white" | "text-black";
+  numberOfMembers: number;
 }
 
 const MeetTheTeam = ({
   title,
   className,
-  bgText
+  bgText,
+  numberOfMembers,
 }: Readonly<PropsWithChildren<Props>>) => {
+  const members = Array.from({ length: numberOfMembers });
+
   return (
     <section className={className}>
       <Wrapper>
@@ -24,13 +27,12 @@ const MeetTheTeam = ({
         </HeadingBorderBottom>
         <ContentSpacing />
         <ContentSpacing />
-        <ul className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-          <li> <TeamCard bgText={bgText}/> </li>
-          <li> <TeamCard bgText={bgText}/> </li>
-          <li> <TeamCard bgText={bgText}/> </li>
-          <li> <TeamCard bgText={bgText}/> </li>
-          <li> <TeamCard bgText={bgText}/> </li>
-          <li> <TeamCard bgText={bgText}/> </li>
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+          {members.map((_, index) => (
+            <li key={index}>
+              <TeamCard bgText={bgText} />
+            </li>
+          ))}
         </ul>
       </Wrapper>
     </section>
@@ -38,4 +40,3 @@ const MeetTheTeam = ({
 };
 
 export default MeetTheTeam;
-
