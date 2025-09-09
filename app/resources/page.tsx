@@ -4,6 +4,7 @@ import bookImage from "@/public/assets/images/bookcover.jpg";
 import Wrapper from "../components/Generics/Wrapper";
 import SectionSpacing from "../components/Spacing/SectionSpacing";
 import ResourcesCard from "./ResourceCard";
+import HeadingBorderBottom from "../components/Headers/HeadingBorderBottom";
 
 
 const resourcesData = [
@@ -35,6 +36,10 @@ const Resources = () => {
     <section>
       <PageBanner title="Our Resources" />
       <Wrapper>
+        <SectionSpacing />
+        <HeadingBorderBottom>
+          <span className="text-black">Download Resources</span>
+        </HeadingBorderBottom>
         <SectionSpacing />
         <div className="flex flex-col space-y-16">
           {resourcesData.map((resource, index) => (
