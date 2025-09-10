@@ -1,12 +1,13 @@
-import PageBanner from "../components/Banners/PageBanner";
+"use client";
 
+import React from 'react';
+import PageBanner from "../components/Banners/PageBanner";
 import bookImage from "@/public/assets/images/bookcover.jpg"; 
 import Wrapper from "../components/Generics/Wrapper";
 import SectionSpacing from "../components/Spacing/SectionSpacing";
 import ResourcesCard from "./ResourceCard";
 import HeadingBorderBottom from "../components/Headers/HeadingBorderBottom";
 import AnimatedComponent from "../components/AnimatedComponent";
-
 
 const resourcesData = [
   {
@@ -39,22 +40,21 @@ const Resources = () => {
       <Wrapper>
         <SectionSpacing />
         <AnimatedComponent>
-        <HeadingBorderBottom>
-          <span className="text-black">Download Resources</span>
-        </HeadingBorderBottom>
+          <HeadingBorderBottom>
+            <span className="text-black">Download Resources</span>
+          </HeadingBorderBottom>
         </AnimatedComponent>
         <SectionSpacing />
         <div className="flex flex-col space-y-16">
           {resourcesData.map((resource, index) => (
-            <AnimatedComponent>
-            <ResourcesCard
-              key={index}
-              imageSrc={resource.imageSrc}
-              title={resource.title}
-              description={resource.description}
-              buttonText={resource.buttonText}
-              buttonLink={resource.buttonLink}
-            />
+            <AnimatedComponent key={index}>
+              <ResourcesCard
+                imageSrc={resource.imageSrc}
+                title={resource.title}
+                description={resource.description}
+                buttonText={resource.buttonText}
+                buttonLink={resource.buttonLink}
+              />
             </AnimatedComponent>
           ))}
         </div>

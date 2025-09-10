@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import WatchSessionCard from './WatchSessionCard';
 import PageBanner from '../components/Banners/PageBanner';
@@ -5,7 +7,6 @@ import Wrapper from '../components/Generics/Wrapper';
 import HeadingBorderBottom from '../components/Headers/HeadingBorderBottom';
 import ContentSpacing from '../components/Spacing/ContentSpacing';
 import SectionSpacing from '../components/Spacing/SectionSpacing';
-
 import sessionImage1 from "@/public/assets/images/session-1.jpg";
 import AnimatedComponent from '../components/AnimatedComponent';
 
@@ -35,7 +36,6 @@ const sessionsData = [
     description: "This panel brings together young leaders from government, political parties, and civil society to reflect on the kind of leadership needed to sustain meaningful democracies in the Global South. The session explores what it takes to lead with integrity, vision, and purpose toward more just and inclusive futures.",
     link: "/sessions/fourth-session",
   },
-  // Add four more objects here to get a total of 8
   {
     imageSrc: sessionImage1,
     title: "Fifth Session",
@@ -69,20 +69,21 @@ const WatchSession = () => {
       <SectionSpacing />
       <Wrapper>
         <AnimatedComponent>
-        <HeadingBorderBottom>
-          <span className="text-black">Watch Session from Recent Meetings</span>
-        </HeadingBorderBottom>
+          <HeadingBorderBottom>
+            <span className="text-black">Watch Session from Recent Meetings</span>
+          </HeadingBorderBottom>
         </AnimatedComponent>
         <ContentSpacing />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {sessionsData.map((session, index) => (
-            <AnimatedComponent><WatchSessionCard
-              key={index}
-              imageSrc={session.imageSrc}
-              title={session.title}
-              description={session.description}
-              link={session.link}
-            /></AnimatedComponent>
+            <AnimatedComponent key={index}>
+              <WatchSessionCard
+                imageSrc={session.imageSrc}
+                title={session.title}
+                description={session.description}
+                link={session.link}
+              />
+            </AnimatedComponent>
           ))}
         </div>
       </Wrapper>

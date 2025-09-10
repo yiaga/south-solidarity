@@ -1,7 +1,8 @@
-import PageBanner from "../components/Banners/PageBanner";
+"use client";
 
 import React from 'react';
 
+import PageBanner from "../components/Banners/PageBanner";
 import sessionImage1 from "@/public/assets/images/session-1.jpg";
 import Wrapper from "../components/Generics/Wrapper";
 import HeadingBorderBottom from "../components/Headers/HeadingBorderBottom";
@@ -88,15 +89,14 @@ const Updates = () => {
         <ContentSpacing />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {updatesData.map((update, index) => (
-            <AnimatedComponent>
-            <UpdateCard
-              key={index}
-              imageSrc={update.imageSrc}
-              title={update.title}
-              date={update.date}
-              description={update.description}
-              link={update.link}
-            />
+            <AnimatedComponent key={index}>
+              <UpdateCard
+                imageSrc={update.imageSrc}
+                title={update.title}
+                date={update.date}
+                description={update.description}
+                link={update.link}
+              />
             </AnimatedComponent>
           ))}
         </div>
