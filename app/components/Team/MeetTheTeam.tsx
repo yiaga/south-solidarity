@@ -3,6 +3,7 @@ import TeamCard from "./TeamCard";
 import Wrapper from "../Generics/Wrapper";
 import HeadingBorderBottom from "../Headers/HeadingBorderBottom";
 import ContentSpacing from "../Spacing/ContentSpacing";
+import AnimatedComponent from "../AnimatedComponent";
 
 interface Props {
   title: string;
@@ -22,11 +23,15 @@ const MeetTheTeam = ({
   return (
     <section className={className}>
       <Wrapper>
-        <HeadingBorderBottom>
+        
+      <AnimatedComponent>
+      <HeadingBorderBottom>
           <span className={bgText}>{title}</span>
         </HeadingBorderBottom>
+      </AnimatedComponent>
         <ContentSpacing />
         <ContentSpacing />
+        <AnimatedComponent>
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {members.map((_, index) => (
             <li key={index}>
@@ -34,6 +39,7 @@ const MeetTheTeam = ({
             </li>
           ))}
         </ul>
+        </AnimatedComponent>
       </Wrapper>
     </section>
   );

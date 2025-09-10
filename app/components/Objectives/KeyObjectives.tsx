@@ -4,6 +4,7 @@ import ObjectiveCard from './ObjectiveCard';
 import Wrapper from '../Generics/Wrapper';
 import HeadingBorderBottom from '../Headers/HeadingBorderBottom';
 import ContentSpacing from '../Spacing/ContentSpacing';
+import AnimatedComponent from '../AnimatedComponent';
 
 const KeyObjectives = () => {
   const objectivesData = [
@@ -37,19 +38,23 @@ const KeyObjectives = () => {
   return (
     <section className="bg-[#FFAC13] py-24 text-black">
       <Wrapper>
+        <AnimatedComponent>
         <HeadingBorderBottom color='#2EA024'>
           <span className="text-black">Key Objectives</span>
         </HeadingBorderBottom>
+        </AnimatedComponent>
         <ContentSpacing />
         <ContentSpacing />
       <ul className="flex overflow-x-auto gap-5 p-4 no-scrollbar">
         {objectivesData.map((objective) => (
+          <AnimatedComponent>
           <ObjectiveCard
             key={objective.number}
             num={objective.number}
             title={objective.title}
             description={objective.description}
           />
+          </AnimatedComponent>
         ))}
       </ul>
       </Wrapper>

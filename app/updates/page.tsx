@@ -8,6 +8,7 @@ import HeadingBorderBottom from "../components/Headers/HeadingBorderBottom";
 import ContentSpacing from "../components/Spacing/ContentSpacing";
 import SectionSpacing from "../components/Spacing/SectionSpacing";
 import UpdateCard from "./UpdatesCard";
+import AnimatedComponent from "../components/AnimatedComponent";
 
 const updatesData = [
   {
@@ -81,10 +82,13 @@ const Updates = () => {
       <PageBanner title="UPDATES"/>
       <Wrapper>
         <SectionSpacing />
+        <AnimatedComponent>
         <HeadingBorderBottom>Latest News and Updates</HeadingBorderBottom>
+        </AnimatedComponent>
         <ContentSpacing />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {updatesData.map((update, index) => (
+            <AnimatedComponent>
             <UpdateCard
               key={index}
               imageSrc={update.imageSrc}
@@ -93,6 +97,7 @@ const Updates = () => {
               description={update.description}
               link={update.link}
             />
+            </AnimatedComponent>
           ))}
         </div>
       </Wrapper>

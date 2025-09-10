@@ -6,6 +6,7 @@ import ProgramTable from './ProgramTable';
 import Wrapper from '../Generics/Wrapper';
 import HeadingBorderBottom from '../Headers/HeadingBorderBottom';
 import ContentSpacing from '../Spacing/ContentSpacing';
+import AnimatedComponent from '../AnimatedComponent';
 
 // Define the data types for clarity and type safety
 export interface Person {
@@ -194,12 +195,16 @@ const Program: React.FC = () => {
   return (
     <section className="bg-white py-24 text-black">
       <Wrapper>
+        <AnimatedComponent>
         <HeadingBorderBottom>
           <span className="text-black">Our Programme</span>
         </HeadingBorderBottom>
+        </AnimatedComponent>
         <ContentSpacing />
+        <AnimatedComponent>
         <ProgramTabs programData={programData} onTabChange={handleTabChange} />
         <ProgramTable dayData={programData[activeTab]} />
+        </AnimatedComponent>
       </Wrapper>
     </section>
   );

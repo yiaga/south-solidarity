@@ -1,3 +1,4 @@
+import AnimatedComponent from "./components/AnimatedComponent";
 import HommerBanner from "./components/Banners/HommerBanner";
 import Buttton from "./components/Buttons/Buttton";
 import Wrapper from "./components/Generics/Wrapper";
@@ -15,9 +16,14 @@ export default function Home() {
     <section>
       <HommerBanner />
       <SectionSpacing />
+
+      
       <Wrapper>
+        <AnimatedComponent>
         <HeadingBorderBottom>About Event</HeadingBorderBottom>
+        </AnimatedComponent>
         <BaseSpacing />
+        <AnimatedComponent>
         <p>
           Across Africa, Asia, and Latin America, a generation is rising. From Kenya&apos;s Gen Z tax protests mobilized through
            TikTok to Chile&apos;s students reclaiming public spaces, from Nigeria&apos;s #EndSARS dismantling police impunity to Sri Lanka&apos;s
@@ -29,19 +35,25 @@ export default function Home() {
           Whether sparked by tuition hikes, tax bills, or police brutality, they&apos;re united by demands for dignity, accountability, 
           and economic justice.
         </p>
-
+        </AnimatedComponent>
         <ContentSpacing />
         <div className="px-4 lg:px-24 ">
+          <AnimatedComponent>
           <Statistics />
+        </AnimatedComponent>
         </div>
       </Wrapper>
       <SectionSpacing />
       <section>
         <div className="bg-[#FFAC13] py-24 text-black">
         <Wrapper>
+
+          <AnimatedComponent>
           <HeadingBorderBottom color="#008900">South-South Movement <br />Solidarity Pact</HeadingBorderBottom>
+          </AnimatedComponent>
           <BaseSpacing />
           <ContentSpacing />
+          <AnimatedComponent>
           <p>Across Africa, Asia, and Latin America, a generation is rising. From Kenya&apos;s Gen Z tax protests mobilized 
             through TikTok to Chile&apos;s students reclaiming public spaces, from Nigeria&apos;s #EndSARS dismantling 
             police impunity to Sri Lanka&apos;s citizens toppling political dynasties, youth-led movements are rewriting
@@ -53,6 +65,7 @@ export default function Home() {
             Whether sparked by tuition hikes, tax bills, or police brutality, they&apos;re united by demands for dignity, accountability,
             and economic justice.
           </p>
+          </AnimatedComponent>
           <BaseSpacing />
           <ContentSpacing />
           <Buttton size="md" variant="secondary" className="text-white">Download Here</Buttton>
@@ -66,6 +79,7 @@ export default function Home() {
         bgText="text-white"
         numberOfMembers={6}
       />
+
       <Program />
       <KeyObjectives />
     </section>

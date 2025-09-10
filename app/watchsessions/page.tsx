@@ -7,6 +7,7 @@ import ContentSpacing from '../components/Spacing/ContentSpacing';
 import SectionSpacing from '../components/Spacing/SectionSpacing';
 
 import sessionImage1 from "@/public/assets/images/session-1.jpg";
+import AnimatedComponent from '../components/AnimatedComponent';
 
 // Data for all the sessions
 const sessionsData = [
@@ -67,19 +68,21 @@ const WatchSession = () => {
       <PageBanner title="WATCH SESSIONS"/>
       <SectionSpacing />
       <Wrapper>
+        <AnimatedComponent>
         <HeadingBorderBottom>
           <span className="text-black">Watch Session from Recent Meetings</span>
         </HeadingBorderBottom>
+        </AnimatedComponent>
         <ContentSpacing />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {sessionsData.map((session, index) => (
-            <WatchSessionCard
+            <AnimatedComponent><WatchSessionCard
               key={index}
               imageSrc={session.imageSrc}
               title={session.title}
               description={session.description}
               link={session.link}
-            />
+            /></AnimatedComponent>
           ))}
         </div>
       </Wrapper>
