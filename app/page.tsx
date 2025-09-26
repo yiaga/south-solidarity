@@ -20,21 +20,21 @@ export default function Home() {
       
       <Wrapper>
         <AnimatedComponent>
-        <HeadingBorderBottom>About Event</HeadingBorderBottom>
+        <HeadingBorderBottom>About the Convergence</HeadingBorderBottom>
         </AnimatedComponent>
         <BaseSpacing />
         <AnimatedComponent>
-        <p>
-          Across Africa, Asia, and Latin America, a generation is rising. From Kenya&apos;s Gen Z tax protests mobilized through
-           TikTok to Chile&apos;s students reclaiming public spaces, from Nigeria&apos;s #EndSARS dismantling police impunity to Sri Lanka&apos;s
-            citizens toppling political dynasties, youth-led movements are rewriting the rules of democratic engagement.          
-        </p>
-        <p>
-          These uprisings share more than grievances against corruption, inequality, and authoritarian drift. 
-          They represent a new political imagination: digitally native, intersectional, leaderless yet collectively powerful. 
-          Whether sparked by tuition hikes, tax bills, or police brutality, they&apos;re united by demands for dignity, accountability, 
-          and economic justice.
-        </p>
+          <p>
+            The Convergence tagged Connected Struggles, Many Voices is a gathering of social movement leaders, activists, artists, 
+            and scholars from Africa, Asia, and Latin America designed to examine how youth activism, and social movements are reshaping
+             democracy, and confronting authoritarianism across the global south. 
+             </p>
+             <br />
+             <p>
+             The convergence seeks to create opportunities for
+              co-creating tools for civic architecture, cross-border solidarity, and building new partnerships for advancing 
+              democratic renewal in the south.
+          </p>
         </AnimatedComponent>
         <ContentSpacing />
         <div className="px-4 lg:px-24 ">
@@ -44,26 +44,23 @@ export default function Home() {
         </div>
       </Wrapper>
       <SectionSpacing />
+
+      <KeyObjectives />
+      
       <section>
-        <div className="bg-[#FFAC13] py-24 text-black">
+        <div className="py-24 text-black">
         <Wrapper>
 
           <AnimatedComponent>
-          <HeadingBorderBottom color="#008900">South-South Movement <br />Solidarity Pact</HeadingBorderBottom>
+          <HeadingBorderBottom>South-South Movement <br />Solidarity Pact</HeadingBorderBottom>
           </AnimatedComponent>
           <BaseSpacing />
           <ContentSpacing />
           <AnimatedComponent>
-          <p>Across Africa, Asia, and Latin America, a generation is rising. From Kenya&apos;s Gen Z tax protests mobilized 
-            through TikTok to Chile&apos;s students reclaiming public spaces, from Nigeria&apos;s #EndSARS dismantling 
-            police impunity to Sri Lanka&apos;s citizens toppling political dynasties, youth-led movements are rewriting
-            the rules of democratic engagement.
-          </p>
           <p>
-            These uprisings share more than grievances against corruption, inequality, and authoritarian drift. 
-            They represent a new political imagination: digitally native, intersectional, leaderless yet collectively powerful. 
-            Whether sparked by tuition hikes, tax bills, or police brutality, they&apos;re united by demands for dignity, accountability,
-            and economic justice.
+            The South-South Movements Solidarity Pact is a declaration for democracy, articulating a new narrative that advances 
+            democratic renewal. The pact highlights a set of commitments by leaders of social movements and activists in the south 
+            to be strong voices for democracy, engaging in collective action and the practice of rigorous solidarity.
           </p>
           </AnimatedComponent>
           <BaseSpacing />
@@ -81,7 +78,6 @@ export default function Home() {
       />
 
       <Program />
-      <KeyObjectives />
     </section>
   );
 }

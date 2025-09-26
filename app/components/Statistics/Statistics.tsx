@@ -12,19 +12,14 @@ const stats = [
   },
 
   {
-    value: "130",
-    label: "Partners",
-  },
-
-  {
-    value: "130",
+    value: "40",
     label: "Speakers",
   },
 ];
 
 const Statistics = () => {
   return (
-    <ul className=" grid grid-cols-4 gap-8 lg:gap-16 text-color-text">
+    <ul className="grid grid-cols-3 gap-8 lg:gap-16 text-color-text **mx-auto**">
       {stats.map(({ label, value }) => {
         return (
           <li key={label}>
