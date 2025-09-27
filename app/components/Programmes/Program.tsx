@@ -218,7 +218,17 @@ const Program: React.FC = () => {
         <ContentSpacing />
         <AnimatedComponent>
         <ProgramTabs programData={programData} onTabChange={handleTabChange} />
-        <ProgramTable dayData={programData[activeTab]} />
+
+        <div className="p-10 max-w-6xl mx-auto font-sans flex flex-col items-center justify-center min-h-[30vh]">
+          <p 
+            className="text-2xl md:text-3xl font-black tracking-wider animate-pulse"
+            style={{ color: '#FFAC13' }}
+          >
+            DETAILED PROGRAMME COMING SOON
+          </p>
+
+        </div>
+        {/* <ProgramTable dayData={programData[activeTab]} /> */}
         </AnimatedComponent>
       </Wrapper>
     </section>
