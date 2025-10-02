@@ -1,3 +1,4 @@
+import Link from "next/link";
 import AnimatedComponent from "./components/AnimatedComponent";
 import HommerBanner from "./components/Banners/HommerBanner";
 import Buttton from "./components/Buttons/Buttton";
@@ -65,7 +66,11 @@ export default function Home() {
           </AnimatedComponent>
           <BaseSpacing />
           <ContentSpacing />
-          <Buttton size="md" variant="secondary" className="text-white">Download Here</Buttton>
+          <Link href="/resources">
+            <Buttton size="md" variant="secondary" className="text-white">
+              Download Here
+            </Buttton>
+          </Link>
         </Wrapper>
         </div>
         
@@ -74,7 +79,6 @@ export default function Home() {
         title="Meet Our Speakers"
         className="bg-black py-24"
         bgText="text-white"
-        numberOfMembers={6}
       />
 
       <Program />

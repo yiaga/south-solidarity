@@ -23,8 +23,8 @@ const Footer = () => {
               <Link href="/programs" className="menu-link">PROGRAMS</Link>
               <Link href="/speakers" className="menu-link">SPEAKERS</Link>
               <Link href="/resources" className="menu-link">RESOURCES</Link>
-              <Link href="/updates" className="menu-link">UPDATES</Link>
-              <Link href="/watchsessions" className="menu-link">WATCH SESSIONS</Link>
+              {/* <Link href="/updates" className="menu-link">UPDATES</Link>
+              <Link href="/watchsessions" className="menu-link">WATCH SESSIONS</Link> */}
             </li>
           </ul>
 

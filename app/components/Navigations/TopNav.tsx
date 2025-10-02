@@ -52,8 +52,8 @@ const TopNav = () => {
               <Link href="/programs" className={getDesktopLinkClasses('/programs')}>PROGRAMS</Link>
               <Link href="/speakers" className={getDesktopLinkClasses('/speakers')}>SPEAKERS</Link>
               <Link href="/resources" className={getDesktopLinkClasses('/resources')}>RESOURCES</Link>
-              <Link href="/updates" className={getDesktopLinkClasses('/updates')}>UPDATES</Link>
-              <Link href="/watchsessions" className={getDesktopLinkClasses('/watchsessions')}>WATCH SESSIONS</Link>
+              {/* <Link href="/updates" className={getDesktopLinkClasses('/updates')}>UPDATES</Link>
+              <Link href="/watchsessions" className={getDesktopLinkClasses('/watchsessions')}>WATCH SESSIONS</Link> */}
             </li>
             {/* LANGUAGE BUTTON MOVED TO THE END OF THE UL FOR DESKTOP */}
             <li>
