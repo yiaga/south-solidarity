@@ -10,7 +10,6 @@ export default function Home() {
         title="Meet Our Speakers"
         className="bg-white py-24"
         bgText="text-black"
-        numberOfMembers={24}
       />
     </section>
   );
