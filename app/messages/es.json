@@ -1,0 +1,22 @@
+{
+  "HomePage": {
+    "about_title": "Acerca de la Convergencia",
+    "about_p1": "La Convergencia etiquetada como Luchas Conectadas, Múltiples Voces es una reunión de líderes de movimientos sociales, activistas, artistas y académicos de África, Asia y América Latina diseñada para examinar cómo el activismo juvenil y los movimientos sociales están remodelando la democracia y confrontando el autoritarismo en todo el sur global.",
+    "about_p2": "La convergencia busca crear oportunidades para co-crear herramientas para la arquitectura cívica, la solidaridad transfronteriza y construir nuevas alianzas para avanzar en la renovación democrática en el sur.",
+    
+    "pact_title_line1": "Pacte de Solidarité",
+    "pact_title_line2": "des Mouvements Sud-Sud",
+    "pact_p1": "El Pacto de Solidaridad de los Movimientos Sur-Sur es una declaración por la democracia, que articula una nueva narrativa que promueve la renovación democrática. El pacto destaca un conjunto de compromisos de los líderes de movimientos sociales y activistas en el sur para ser voces fuertes en favor de la democracia, participando en la acción colectiva y la práctica de una solidaridad rigurosa.",
+    "pact_button": "Descargar aquí",
+    
+    "team_title": "Conozca a nuestros oradores"
+  },
+
+  "Nav": { 
+  
+    "home": "INICIO",
+    "programs": "PROGRAMAS",
+    "speakers": "PONENTES",
+    "resources": "RECURSOS"
+  }
+}

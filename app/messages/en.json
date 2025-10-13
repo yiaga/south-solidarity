@@ -1,0 +1,21 @@
+
+{
+  "HomePage": {
+    "about_title": "About the Convergence",
+    "about_p1": "The Convergence tagged Connected Struggles, Many Voices is a gathering of social movement leaders, activists, artists, and scholars from Africa, Asia, and Latin America designed to examine how youth activism, and social movements are reshaping democracy, and confronting authoritarianism across the global south.",
+    "about_p2": "The convergence seeks to create opportunities for co-creating tools for civic architecture, cross-border solidarity, and building new partnerships for advancing democratic renewal in the south.",
+    
+    "pact_title_line1": "South-South Movement",
+    "pact_title_line2": "Solidarity Pact",
+    "pact_p1": "The South-South Movements Solidarity Pact is a declaration for democracy, articulating a new narrative that advances democratic renewal. The pact highlights a set of commitments by leaders of social movements and activists in the south to be strong voices for democracy, engaging in collective action and the practice of rigorous solidarity.",
+    "pact_button": "Download Here",
+    
+    "team_title": "Meet Our Speakers"
+  },
+  "Nav": { 
+    "home": "HOME",
+    "programs": "PROGRAMS",
+    "speakers": "SPEAKERS",
+    "resources": "RESOURCES"
+  }
+}

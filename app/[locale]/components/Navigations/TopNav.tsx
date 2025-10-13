@@ -1,17 +1,18 @@
+// components/TopNav.tsx (Updated)
 "use client";
 
 import React, { useState } from 'react';
-import Buttton from "../Buttons/Buttton";
 import Logo from "../Generics/Logo";
 import Wrapper from "../Generics/Wrapper";
 import { HiBars3 } from "react-icons/hi2";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import LocaleSwitcher from '../../LocaleSwitcher';
 
 const TopNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  const HEADER_HEIGHT_PX = '111px'; // Define header height for modal offset
+  const HEADER_HEIGHT_PX = '111px'; 
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -21,17 +22,13 @@ const TopNav = () => {
     setIsMenuOpen(false);
   };
 
-  // Function to apply active/inactive classes for the MOBILE menu
   const getMobileLinkClasses = (href: string) => {
-    const isActive = pathname === href;
-    // Mobile links are large, centralized, and use the full-screen modal style
+    const isActive = pathname.endsWith(href) && (pathname.split('/').filter(Boolean).length === 1 || href !== '/');
     return `text-4xl ${isActive ? 'font-bold text-[#FFAC13]' : 'text-white'}`;
   };
 
-  // Function to apply active/inactive classes for the DESKTOP menu
   const getDesktopLinkClasses = (href: string) => {
-    const isActive = pathname === href;
-    // Desktop links are smaller, uppercase, and inline
+    const isActive = pathname.endsWith(href) && (pathname.split('/').filter(Boolean).length === 1 || href !== '/');
     return `text-base uppercase hover:text-[#FFAC13] transition-colors ${isActive ? 'font-bold text-[#FFAC13]' : 'text-white'}`;
   };
 
@@ -52,23 +49,19 @@ const TopNav = () => {
               <Link href="/programs" className={getDesktopLinkClasses('/programs')}>PROGRAMS</Link>
               <Link href="/speakers" className={getDesktopLinkClasses('/speakers')}>SPEAKERS</Link>
               <Link href="/resources" className={getDesktopLinkClasses('/resources')}>RESOURCES</Link>
-              {/* <Link href="/updates" className={getDesktopLinkClasses('/updates')}>UPDATES</Link>
-              <Link href="/watchsessions" className={getDesktopLinkClasses('/watchsessions')}>WATCH SESSIONS</Link> */}
             </li>
-            {/* LANGUAGE BUTTON MOVED TO THE END OF THE UL FOR DESKTOP */}
+           
             <li>
-              <Buttton size="sm" className="text-primary" variant="border">
-                ENG
-              </Buttton>
+              {/* DESKTOP LocaleSwitcher (isMobile={false} is correct here) */}
+              <LocaleSwitcher isMobile={false} /> 
             </li>
           </ul>
         </nav>
         
         {/* --- MOBILE/TABLET BUTTONS (Hidden on LG screens and up) --- */}
         <div className="flex items-center space-x-4 lg:hidden">
-          <Buttton size="sm" className="text-primary" variant="border">
-            ENG
-          </Buttton>
+          {/* MOBILE/TABLET LocaleSwitcher (isMobile={false} is correct for compact button) */}
+          <LocaleSwitcher isMobile={false} /> 
           <button onClick={toggleMenu} className="text-gray-800">
             <HiBars3 className="h-8 w-8 text-[#FFAC13]" />
           </button>
@@ -79,9 +72,8 @@ const TopNav = () => {
       {isMenuOpen && (
         <div 
           className="fixed left-0 w-full h-full bg-black bg-opacity-90 z-40 flex flex-col items-center justify-center transition-opacity duration-300 ease-in-out"
-          style={{ top: HEADER_HEIGHT_PX }} // Offset the modal content below the fixed header
+          style={{ top: HEADER_HEIGHT_PX }}
         >
-          {/* Close button for the mobile modal */}
           <button 
             onClick={closeMenu} 
             className="absolute top-6 right-6 text-white text-5xl font-light"
@@ -90,14 +82,18 @@ const TopNav = () => {
             &times;
           </button>
 
-          <nav className="flex flex-col items-center space-y-8">
+          <nav className="flex flex-col items-center space-y-8 mb-10">
             <Link href="/" className={getMobileLinkClasses('/')} onClick={closeMenu}>Home</Link>
             <Link href="/programs" className={getMobileLinkClasses('/programs')} onClick={closeMenu}>Program</Link>
             <Link href="/speakers" className={getMobileLinkClasses('/speakers')} onClick={closeMenu}>Speakers</Link>
             <Link href="/resources" className={getMobileLinkClasses('/resources')} onClick={closeMenu}>Resources</Link>
-            <Link href="/updates" className={getMobileLinkClasses('/updates')} onClick={closeMenu}>Updates</Link>
-            <Link href="/watchsessions" className={getMobileLinkClasses('/watchsessions')} onClick={closeMenu}>Watch Sessions</Link>
           </nav>
+          
+          {/* OPTIONAL: If you wanted a full-width selector inside the menu: */}
+          {/* <div className="mt-8 w-3/4 max-w-xs">
+            <LocaleSwitcher isMobile={true} /> 
+          </div> */}
+
         </div>
       )}
     </header>
