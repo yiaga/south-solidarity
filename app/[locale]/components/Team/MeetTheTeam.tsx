@@ -60,9 +60,9 @@ const MeetTheTeam = ({
         <ContentSpacing />
         <ContentSpacing />
         <AnimatedComponent>
-          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
             {/* 4. Map over the data array and pass each member object to TeamCard */}
-            {membersToDisplay.map((member, index) => (
+            {membersToDisplay.map((member) => (
               <li key={member.name} className="flex justify-center">
                 <TeamCard bgText={bgText} member={member} />
               </li>

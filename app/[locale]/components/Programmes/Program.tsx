@@ -2,11 +2,11 @@
 
 import React, { useState } from 'react';
 import ProgramTabs from './ProgramTabs';
-import ProgramTable from './ProgramTable';
 import Wrapper from '../Generics/Wrapper';
 import HeadingBorderBottom from '../Headers/HeadingBorderBottom';
 import ContentSpacing from '../Spacing/ContentSpacing';
 import AnimatedComponent from '../AnimatedComponent';
+import ProgramTable from './ProgramTable';
 
 // Define the data types for clarity and type safety
 export interface Person {
@@ -206,6 +206,8 @@ const Program: React.FC = () => {
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
   };
+
+  void activeTab;
 
   return (
     <section className="bg-white py-24 text-black">
