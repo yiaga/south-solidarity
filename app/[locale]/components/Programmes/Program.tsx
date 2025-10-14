@@ -6,7 +6,7 @@ import Wrapper from '../Generics/Wrapper';
 import HeadingBorderBottom from '../Headers/HeadingBorderBottom';
 import ContentSpacing from '../Spacing/ContentSpacing';
 import AnimatedComponent from '../AnimatedComponent';
-import ProgramTable from './ProgramTable';
+// import ProgramTable from './ProgramTable';
 
 // Define the data types for clarity and type safety
 export interface Person {

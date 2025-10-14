@@ -12,45 +12,32 @@ import Buttton from "./components/Buttons/Buttton";
 import MeetTheTeam from "./components/Team/MeetTheTeam";
 import Program from "./components/Programmes/Program";
 
-// Localized message imports
 import EnglishTranslation from "../messages/en.json";
 import FrenchTranslation from "../messages/fr.json";
 import SpanishTranslation from "../messages/es.json";
 
-
 // --- All translations ---
-const ALL_MESSAGES = {
-  en: EnglishTranslation,
-  fr: FrenchTranslation,
-  es: SpanishTranslation,
-};
-
+const ALL_MESSAGES = { en: EnglishTranslation, fr: FrenchTranslation, es: SpanishTranslation };
 type TranslationKey = keyof typeof EnglishTranslation["HomePage"];
 
-// --- Translation helper function ---
+// --- Translation helper ---
 const getT = (locale: string) => {
-  const localeMessages =
-    ALL_MESSAGES[locale as keyof typeof ALL_MESSAGES] || ALL_MESSAGES.en;
-
+  const localeMessages = ALL_MESSAGES[locale as keyof typeof ALL_MESSAGES] || ALL_MESSAGES.en;
   const homePageMessages = localeMessages.HomePage;
 
-  return (key: TranslationKey) => {
-    return homePageMessages[key] || `[Translation Missing: ${key} for ${locale}]`;
-  };
+  return (key: TranslationKey) =>
+    homePageMessages[key] || `[Translation Missing: ${key} for ${locale}]`;
 };
 
-// --- Static locales for pre-generation ---
 const locales = ["en", "fr", "es"];
 
 export async function generateStaticParams() {
-  return locales.map((locale) => ({
-    locale,
-  }));
+  return locales.map((locale) => ({ locale }));
 }
 
-// ✅ Fixed typing: inline type for params
-export default function Home({ params }: { params: { locale: string } }) {
-  const locale = params.locale;
+// ✅ The key fix: make it async and await params
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params; // ✅ this line resolves the Promise type
   const t = getT(locale);
 
   return (
@@ -68,13 +55,9 @@ export default function Home({ params }: { params: { locale: string } }) {
         <BaseSpacing />
 
         <AnimatedComponent>
-          <p className="text-lg leading-relaxed text-gray-700">
-            {t("about_p1")}
-          </p>
+          <p className="text-lg leading-relaxed text-gray-700">{t("about_p1")}</p>
           <br />
-          <p className="text-lg leading-relaxed text-gray-700">
-            {t("about_p2")}
-          </p>
+          <p className="text-lg leading-relaxed text-gray-700">{t("about_p2")}</p>
         </AnimatedComponent>
 
         <ContentSpacing />
@@ -87,11 +70,8 @@ export default function Home({ params }: { params: { locale: string } }) {
       </Wrapper>
 
       <SectionSpacing />
-
-      {/* --- Objectives Section --- */}
       <KeyObjectives />
 
-      {/* --- Pact Section --- */}
       <section className="bg-gray-100">
         <div className="py-24 text-black">
           <Wrapper>
@@ -106,9 +86,7 @@ export default function Home({ params }: { params: { locale: string } }) {
             <ContentSpacing />
 
             <AnimatedComponent>
-              <p className="text-lg leading-relaxed text-gray-700">
-                {t("pact_p1")}
-              </p>
+              <p className="text-lg leading-relaxed text-gray-700">{t("pact_p1")}</p>
             </AnimatedComponent>
 
             <BaseSpacing />
@@ -129,14 +107,12 @@ export default function Home({ params }: { params: { locale: string } }) {
         </div>
       </section>
 
-      {/* --- Team Section --- */}
       <MeetTheTeam
         title={t("team_title")}
         className="bg-gray-900 py-24"
         bgText="text-white"
       />
 
-      {/* --- Programs Section --- */}
       <Program />
     </section>
   );
