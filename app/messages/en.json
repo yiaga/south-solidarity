@@ -26,16 +26,16 @@
   },
   "Objective": {
     "key_objectives": "Key Objectives",
-    "objective_title_1": "Key Objectives",
-    "objective_title_2": "Key Objectives",
-    "objective_title_3": "Key Objectives",
-    "objective_title_4": "Key Objectives",
-    "objective_title_5": "Key Objectives",
-    "objective_1": "Key Objectives",
-    "objective_2": "Key Objectives",
-    "objective_3": "Key Objectives",
-    "objective_4": "Key Objectives",
-    "objective_5": "Key Objectives"
+    "objective_title_1": "Take Stock",
+    "objective_1": "Analyze lessons from recent protests and movements to identify what works, what fails, and why some endure while others falter.",
+    "objective_title_2": "Innovate Together",
+    "objective_2": "Critically examine how social media, AI, and digital tools advance social justice while addressing surveillance, co-optation, and repression risks.",
+    "objective_title_3": "Heal and Sustain",
+    "objective_3": "Address movement trauma, burnout, and emotional costs while developing frameworks for care, strategy, and long-term resilience.",
+    "objective_title_4": "Build Forward",
+    "objective_4": "Co-create tools for cross-border solidarity, civic architecture, and narrative power that extends beyond single protest moments.",
+    "objective_title_5": "Strengthen Solidarity",
+    "objective_5": "Forge vibrant communities of practice reimagining leadership, policy, and democratic futures across the Global South"
   },
   "Program":{
     "program_title": "Our Programme",
