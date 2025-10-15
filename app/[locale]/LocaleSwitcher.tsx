@@ -44,6 +44,7 @@ const LocaleSwitcher: React.FC<LocaleSwitcherProps> = ({ isMobile }) => {
   } 
 
   const currentLocale = locales.find(l => l.code === currentLocaleCode) || locales[0];
+  
 
   // 2. Logic to close the dropdown when clicking outside
   useEffect(() => {
