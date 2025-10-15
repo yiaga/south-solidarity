@@ -1,16 +1,9 @@
-import PageBanner from "../components/Banners/PageBanner";
-import MeetTheTeam from "../components/Team/MeetTheTeam";
+import { generateLocaleStaticParams } from "@/app/libs/locales";
+import SpeakersClient from "./SpeakersClient";
 
+// ✅ Add generateStaticParams for static export
+export const generateStaticParams = generateLocaleStaticParams;
 
-export default function Home() {
-  return (
-    <section>
-      <PageBanner title="MEET THE SPEAKERS" />
-      <MeetTheTeam
-        title="Meet Our Speakers"
-        className="bg-white py-24"
-        bgText="text-black"
-      />
-    </section>
-  );
+export default function SpeakersPage() {
+  return <SpeakersClient />;
 }

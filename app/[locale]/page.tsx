@@ -1,3 +1,4 @@
+// app/[locale]/page.tsx
 import Link from "next/link";
 import HommerBanner from "./components/Banners/HommerBanner";
 import SectionSpacing from "./components/Spacing/SectionSpacing";
@@ -16,37 +17,40 @@ import EnglishTranslation from "../messages/en.json";
 import FrenchTranslation from "../messages/fr.json";
 import SpanishTranslation from "../messages/es.json";
 
-// --- All translations ---
-const ALL_MESSAGES = { en: EnglishTranslation, fr: FrenchTranslation, es: SpanishTranslation };
+import { generateLocaleStaticParams } from "@/app/libs/locales";
+
+export const generateStaticParams = generateLocaleStaticParams;
+
+const ALL_MESSAGES = {
+  en: EnglishTranslation,
+  fr: FrenchTranslation,
+  es: SpanishTranslation,
+};
+
 type TranslationKey = keyof typeof EnglishTranslation["HomePage"];
 
-// --- Translation helper ---
 const getT = (locale: string) => {
-  const localeMessages = ALL_MESSAGES[locale as keyof typeof ALL_MESSAGES] || ALL_MESSAGES.en;
+  const localeMessages =
+    ALL_MESSAGES[locale as keyof typeof ALL_MESSAGES] || ALL_MESSAGES.en;
   const homePageMessages = localeMessages.HomePage;
 
   return (key: TranslationKey) =>
     homePageMessages[key] || `[Translation Missing: ${key} for ${locale}]`;
 };
 
-const locales = ["en", "fr", "es"];
-
-export async function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
-
-// ✅ The key fix: make it async and await params
-export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params; // ✅ this line resolves the Promise type
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   const t = getT(locale);
 
   return (
     <section className="min-h-screen bg-white text-gray-900">
-      {/* --- Hero Banner --- */}
       <HommerBanner />
       <SectionSpacing />
 
-      {/* --- About Section --- */}
       <Wrapper>
         <AnimatedComponent>
           <HeadingBorderBottom>{t("about_title")}</HeadingBorderBottom>
@@ -55,14 +59,17 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <BaseSpacing />
 
         <AnimatedComponent>
-          <p className="text-lg leading-relaxed text-gray-700">{t("about_p1")}</p>
+          <p className="text-lg leading-relaxed text-gray-700">
+            {t("about_p1")}
+          </p>
           <br />
-          <p className="text-lg leading-relaxed text-gray-700">{t("about_p2")}</p>
+          <p className="text-lg leading-relaxed text-gray-700">
+            {t("about_p2")}
+          </p>
         </AnimatedComponent>
 
         <ContentSpacing />
-
-        <div className="px-0 lg:px-24">
+        <div className="px-0 lg:px-24 ">
           <AnimatedComponent>
             <Statistics />
           </AnimatedComponent>
@@ -86,23 +93,23 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             <ContentSpacing />
 
             <AnimatedComponent>
-              <p className="text-lg leading-relaxed text-gray-700">{t("pact_p1")}</p>
+              <p className="text-lg leading-relaxed text-gray-700">
+                {t("pact_p1")}
+              </p>
             </AnimatedComponent>
 
             <BaseSpacing />
             <ContentSpacing />
 
-            <AnimatedComponent>
-              <Link href="/resources" className="inline-block">
-                <Buttton
-                  size="md"
-                  variant="secondary"
-                  className="text-white bg-green-600 hover:bg-green-700"
-                >
-                  {t("pact_button")}
-                </Buttton>
-              </Link>
-            </AnimatedComponent>
+            <Link href="/resources" className="inline-block">
+              <Buttton
+                size="md"
+                variant="secondary"
+                className="text-white bg-green-600 hover:bg-green-700"
+              >
+                {t("pact_button")}
+              </Buttton>
+            </Link>
           </Wrapper>
         </div>
       </section>
