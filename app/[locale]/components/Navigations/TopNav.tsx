@@ -8,6 +8,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import LocaleSwitcher from "../../LocaleSwitcher";
 
+import EnglishTranslation from "@/app/messages/en.json";
+import FrenchTranslation from "@/app/messages/fr.json";
+import SpanishTranslation from "@/app/messages/es.json";
+
+const ALL_MESSAGES = {
+  en: EnglishTranslation,
+  fr: FrenchTranslation,
+  es: SpanishTranslation,
+};
+
 const TopNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -15,28 +25,33 @@ const TopNav = () => {
 
   // ✅ Detect current locale from pathname (e.g., /en/programs → 'en')
   const currentLocale = pathname.split("/")[1] || "en";
+  const localeMessages =
+    ALL_MESSAGES[currentLocale as keyof typeof ALL_MESSAGES] || ALL_MESSAGES.en;
+  const navT = localeMessages.Nav;
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
 
   const getMobileLinkClasses = (href: string) => {
-    const isActive = pathname.endsWith(href);
-    return `text-4xl ${isActive ? "font-bold text-[#FFAC13]" : "text-white"}`;
+    const isActive = pathname === href;
+    return `text-4xl ${
+      isActive ? "font-bold text-[#FFAC13]" : "text-white"
+    }`;
   };
 
   const getDesktopLinkClasses = (href: string) => {
-    const isActive = pathname.endsWith(href);
+    const isActive = pathname === href;
     return `text-base uppercase hover:text-[#FFAC13] transition-colors ${
       isActive ? "font-bold text-[#FFAC13]" : "text-white"
     }`;
   };
 
-  // ✅ Define locale-aware links
+  // ✅ Locale-aware, translated navigation links
   const links = [
-    { name: "HOME", href: `/${currentLocale}` },
-    { name: "PROGRAMS", href: `/${currentLocale}/programs` },
-    { name: "SPEAKERS", href: `/${currentLocale}/speakers` },
-    { name: "RESOURCES", href: `/${currentLocale}/resources` },
+    { name: navT.home, href: `/${currentLocale}` },
+    { name: navT.programs, href: `/${currentLocale}/programs` },
+    { name: navT.speakers, href: `/${currentLocale}/speakers` },
+    { name: navT.resources, href: `/${currentLocale}/resources` },
   ];
 
   return (

@@ -13,10 +13,50 @@
   },
 
   "Nav": { 
-  
     "home": "INICIO",
     "programs": "PROGRAMAS",
     "speakers": "PONENTES",
     "resources": "RECURSOS"
+  },
+  "About": {
+    "about_t1": "Delegados",
+    "about_t2": "Países",
+    "about_t3": "Oradores"
+  },
+  "Objective": {
+    "key_objectives": "Objetivos clave",
+    "objective_title_1": "Hacer balance",
+    "objective_title_2": "Innovar juntos",
+    "objective_title_3": "Sanar y sostener",
+    "objective_title_4": "Construir hacia adelante",
+    "objective_title_5": "Fortalecer la solidaridad",
+    "objective_1":       "Analizar las lecciones de las protestas y movimientos recientes para identificar qué funciona, qué falla y por qué algunos perduran mientras otros se desvanecen.",
+    "objective_2":       "Examinar críticamente cómo las redes sociales, la inteligencia artificial y las herramientas digitales impulsan la justicia social mientras se enfrentan los riesgos de vigilancia, cooptación y represión.",
+    "objective_3":       "Abordar los traumas de los movimientos, el agotamiento y los costos emocionales, desarrollando marcos de cuidado, estrategia y resiliencia a largo plazo.",
+    "objective_4":       "Cocrear herramientas para la solidaridad transfronteriza, la arquitectura cívica y el poder narrativo que trascienden los momentos de protesta aislados.",
+    "objective_5":       "Forjar comunidades de práctica vibrantes que reimaginen el liderazgo, las políticas y los futuros democráticos en todo el Sur Global."
+  },
+  "Program": {
+    "program_title": "Nuestro programa",
+    "detail": "PROGRAMA DETALLADO PRÓXIMAMENTE"
+  },
+  "Footer": {
+    "quick_links": "Enlaces rápidos",
+    "home": "INICIO",
+    "programs": "PROGRAMAS",
+    "speakers": "PONENTES",
+    "resources": "RECURSOS"
+  },
+  "Speakers": {
+    "banner_title": "CONOCE A LOS PONENTES",
+    "section_title": "Conoce a nuestros ponentes"
+  },
+  "Resources": {
+    "banner_title": "Nuestros Recursos",
+    "section_heading": "Descargar Recursos",
+    "ssmc_title": "CONVERGENCIA DE MOVIMIENTOS SOCIALES DEL SUR",
+    "ssmc_description": "La CONVERGENCIA DE MOVIMIENTOS SOCIALES DEL SUR es un evento importante que tendrá lugar del 30 de octubre al 1 de noviembre de 2025, con el tema 'Luchas Conectadas, Muchas Voces'. Su objetivo es conectar y amplificar las lecciones de una generación emergente de movimientos liderados por jóvenes en África, Asia y América Latina.",
+    "download_button": "Descargar aquí"
   }
+
 }

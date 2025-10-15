@@ -17,5 +17,49 @@
     "programs": "PROGRAMMES",
     "speakers": "CONFÉRENCIERS",
     "resources": "RESSOURCES"
+  },
+  "About": {
+    "about_t1": "Délégués",
+    "about_t2": "Pays",
+    "about_t3": "Conférenciers"
+  },
+  "Objective": {
+    "key_objectives": "Objectifs clés",
+    "objective_title_1": "Faire le bilan",
+    "objective_title_2": "Innover ensemble",
+    "objective_title_3": "Guérir et durer",
+    "objective_title_4": "Construire l’avenir",
+    "objective_title_5": "Renforcer la solidarité",
+    "objective_1": "Analyser les leçons tirées des récentes manifestations et mouvements afin d’identifier ce qui fonctionne, ce qui échoue, et pourquoi certains perdurent tandis que d’autres s’essoufflent.",
+    "objective_2": "Examiner de manière critique comment les médias sociaux, l’intelligence artificielle et les outils numériques favorisent la justice sociale tout en abordant les risques de surveillance, de récupération et de répression.",
+    "objective_3": "Traiter les traumatismes des mouvements, l’épuisement et les coûts émotionnels tout en développant des cadres de soin, de stratégie et de résilience à long terme.",
+    "objective_4": "Co-créer des outils pour la solidarité transfrontalière, l’architecture civique et le pouvoir narratif qui dépasse les moments de protestation isolés.",
+    "objective_5": "Forger des communautés de pratique dynamiques réimaginant le leadership, les politiques et les futurs démocratiques à travers le Sud global."
+  },
+  "Program": {
+    "program_title": "Notre Programme",
+    "detail": "PROGRAMME DÉTAILLÉ À VENIR BIENTÔT"
+  },
+  "Footer": {
+    "quick_links": "Liens rapides",
+    "home": "ACCUEIL",
+    "programs": "PROGRAMMES",
+    "speakers": "CONFÉRENCIERS",
+    "resources": "RESSOURCES"
+  },
+  "Speakers": {
+    "banner_title": "RENCONTREZ LES INTERVENANTS",
+    "section_title": "Rencontrez nos intervenants"
+  },
+  "Resources": {
+    "banner_title": "Nos Ressources",
+    "section_heading": "Télécharger les Ressources",
+    "ssmc_title": "CONVERGENCE DES MOUVEMENTS SOCIAUX DU SUD",
+    "ssmc_description": "La CONVERGENCE DES MOUVEMENTS SOCIAUX DU SUD est un événement majeur qui aura lieu du 30 octobre au 1er novembre 2025, sur le thème 'Luttes Connectées, Voix Multiples'. Il vise à relier et amplifier les leçons d'une génération montante de mouvements dirigés par les jeunes à travers l'Afrique, l'Asie et l'Amérique latine.",
+    "download_button": "Télécharger ici"
   }
+
+
+
+
 }

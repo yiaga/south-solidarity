@@ -4,7 +4,8 @@
     "about_title": "About the Convergence",
     "about_p1": "The Convergence tagged Connected Struggles, Many Voices is a gathering of social movement leaders, activists, artists, and scholars from Africa, Asia, and Latin America designed to examine how youth activism, and social movements are reshaping democracy, and confronting authoritarianism across the global south.",
     "about_p2": "The convergence seeks to create opportunities for co-creating tools for civic architecture, cross-border solidarity, and building new partnerships for advancing democratic renewal in the south.",
-    
+
+
     "pact_title_line1": "South-South Movement",
     "pact_title_line2": "Solidarity Pact",
     "pact_p1": "The South-South Movements Solidarity Pact is a declaration for democracy, articulating a new narrative that advances democratic renewal. The pact highlights a set of commitments by leaders of social movements and activists in the south to be strong voices for democracy, engaging in collective action and the practice of rigorous solidarity.",
@@ -17,5 +18,47 @@
     "programs": "PROGRAMS",
     "speakers": "SPEAKERS",
     "resources": "RESOURCES"
+  },
+  "About": {
+    "about_t1": "Delegates",
+    "about_t2": "Countries",
+    "about_t3": "Speakers"
+  },
+  "Objective": {
+    "key_objectives": "Key Objectives",
+    "objective_title_1": "Key Objectives",
+    "objective_title_2": "Key Objectives",
+    "objective_title_3": "Key Objectives",
+    "objective_title_4": "Key Objectives",
+    "objective_title_5": "Key Objectives",
+    "objective_1": "Key Objectives",
+    "objective_2": "Key Objectives",
+    "objective_3": "Key Objectives",
+    "objective_4": "Key Objectives",
+    "objective_5": "Key Objectives"
+  },
+  "Program":{
+    "program_title": "Our Programme",
+    "detail": "DETAILED PROGRAMME COMING SOON"
+  },
+  "Footer": {
+    "quick_links": "Quick Links",
+    "home": "HOME",
+    "programs": "PROGRAMS",
+    "speakers": "SPEAKERS",
+    "resources": "RESOURCES"
+  },
+  "Speakers": {
+    "banner_title": "MEET THE SPEAKERS",
+    "section_title": "Meet Our Speakers"
+  },
+  "Resources": {
+    "banner_title": "Our Resources",
+    "section_heading": "Download Resources",
+    "ssmc_title": "SOUTH-SOUTH SOCIAL MOVEMENTS CONVERGENCE",
+    "ssmc_description": "SOUTH-SOUTH SOCIAL MOVEMENTS CONVERGENCE is a major event taking place from October 30th to November 1st, 2025, with the theme 'Connected Struggles, Many Voices'. It aims to connect and amplify the lessons from a rising generation of youth-led movements across Africa, Asia, and Latin America.",
+    "download_button": "Download Here"
   }
+
+
 }

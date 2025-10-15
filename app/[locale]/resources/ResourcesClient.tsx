@@ -1,34 +1,53 @@
 "use client";
 
-import React from 'react';
+import React from "react";
+import { usePathname } from "next/navigation";
 import PageBanner from "../components/Banners/PageBanner";
-import ssmcCover from "@/public/assets/images/ssmc_cover.jpg"; 
+import ssmcCover from "@/public/assets/images/ssmc_cover.jpg";
 import Wrapper from "../components/Generics/Wrapper";
 import SectionSpacing from "../components/Spacing/SectionSpacing";
 import ResourcesCard from "./ResourceCard";
 import HeadingBorderBottom from "../components/Headers/HeadingBorderBottom";
 import AnimatedComponent from "../components/AnimatedComponent";
 
-const resourcesData = [
-  {
-    imageSrc: ssmcCover,
-    title: "SOUTH-SOUTH SOCIAL MOVEMENTS CONVERGENCE",
-    description:
-      "SOUTH-SOUTH SOCIAL MOVEMENTS CONVERGENCE is a major event taking place from October 30th to November 1st, 2025, with the theme 'Connected Struggles, Many Voices'. It aims to connect and amplify the lessons from a rising generation of youth-led movements across Africa, Asia, and Latin America.",
-    buttonText: "Download Here",
-    buttonLink: "/assets/documents/ssmc_presentation.pdf",
-  },
-];
+import EnglishTranslation from "@/app/messages/en.json";
+import FrenchTranslation from "@/app/messages/fr.json";
+import SpanishTranslation from "@/app/messages/es.json";
+
+const ALL_MESSAGES = {
+  en: EnglishTranslation,
+  fr: FrenchTranslation,
+  es: SpanishTranslation,
+};
 
 export default function ResourcesClient() {
+  const pathname = usePathname();
+
+  // ✅ Detect current locale (e.g., /fr/resources → 'fr')
+  const currentLocale = pathname.split("/")[1] || "en";
+  const localeMessages =
+    ALL_MESSAGES[currentLocale as keyof typeof ALL_MESSAGES] || ALL_MESSAGES.en;
+
+  const t = localeMessages.Resources;
+
+  const resourcesData = [
+    {
+      imageSrc: ssmcCover,
+      title: t.ssmc_title,
+      description: t.ssmc_description,
+      buttonText: t.download_button,
+      buttonLink: "/assets/documents/ssmc_presentation.pdf",
+    },
+  ];
+
   return (
     <section>
-      <PageBanner title="Our Resources" />
+      <PageBanner title={t.banner_title} />
       <Wrapper>
         <SectionSpacing />
         <AnimatedComponent>
           <HeadingBorderBottom>
-            <span className="text-black">Download Resources</span>
+            <span className="text-black">{t.section_heading}</span>
           </HeadingBorderBottom>
         </AnimatedComponent>
         <SectionSpacing />
